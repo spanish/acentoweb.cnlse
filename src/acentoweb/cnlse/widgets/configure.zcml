@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="acentoweb.cnlse">
+
+      <adapter factory=".widgets.RelatedItemsFieldWidget"
+               for="z3c.relationfield.interfaces.IRelationChoice
+                     acentoweb.cnlse.interfaces.IAcentowebCnlseLayer"/>
+
+      <adapter factory=".widgets.RelatedItemsFieldWidget"
+              for="z3c.relationfield.interfaces.IRelationList
+                    acentoweb.cnlse.interfaces.IAcentowebCnlseLayer"/>
+
+</configure>
