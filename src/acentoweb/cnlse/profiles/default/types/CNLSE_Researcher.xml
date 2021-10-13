@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    name="CNLSE Library"
+    name="CNLSE Researcher"
     meta_type="Dexterity FTI"
     i18n:domain="acentoweb.cnlse">
 
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">CNLSE Library</property>
+      name="title">CNLSE Researcher</property>
   <property
       i18n:translate=""
-      name="description">CNLSE Library</property>
+      name="description">CNLSE Researcher</property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">CNLSE Library</property>
+  <property name="factory">CNLSE Researcher</property>
   <property name="icon_expr"></property>
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
   <property name="global_allow">True</property>
   <!-- Schema, class and security -->
-  <property name="add_permission">acentoweb.cnlse.AddCNLSELibrary</property>
-  <property name="klass">acentoweb.cnlse.content.cnlse_library.CNLSELibrary</property>
+  <property name="add_permission">acentoweb.cnlse.AddCNLSEResearcher</property>
+  <property name="klass">acentoweb.cnlse.content.cnlse_researcher.CNLSEResearcher</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema">acentoweb.cnlse.content.cnlse_library.ICNLSELibrary</property>
+  <property name="schema">acentoweb.cnlse.content.cnlse_researcher.ICNLSEResearcher</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
@@ -50,12 +50,12 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++CNLSE Library</property>
-  <property name="default_view">cnlse-library-view</property>
+  <property name="add_view_expr">string:${folder_url}/++add++CNLSE Researcher</property>
+  <property name="default_view">cnlse-researcher-view</property>
   <property name="default_view_fallback">False</property>
-  <property name="immediate_view">cnlse-library-view</property>
+  <property name="immediate_view">cnlse-researcher-view</property>
   <property name="view_methods">
-    <element value="cnlse-library-view"/>
+    <element value="cnlse-researcher-view"/>
   </property>
 
   <!-- Method aliases -->
