@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+  <!-- -*- extra stuff goes here -*- -->
+
+    <permission name="acentoweb.cnlse: Add CNLSE Researchcenter" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+    <permission name="acentoweb.cnlse: Add CNLSE Library" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+    <permission name="acentoweb.cnlse: Add CNLSE Researcher" acquire="True">
+      <role name="Manager"/>
+      <role name="Site Administrator"/>
+      <role name="Owner"/>
+      <role name="Contributor"/>
+    </permission>
+
+  </permissions>
+</rolemap>
