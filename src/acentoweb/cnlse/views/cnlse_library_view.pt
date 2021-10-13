@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="acentoweb.cnlse"
+      metal:use-macro="context/main_template/macros/master">
+<body>
+  <metal:block fill-slot="content-core">
+
+<!--
+      <figure tal:define="scale_func context/@@images;
+                  scale context/@@images;
+                  scaled_image python:scale_func.scale('image', scale='preview')"
+                  tal:on-error=""
+                  class="cnlse_library_image">
+              <img tal:replace="structure python:scaled_image.tag()"
+                   tal:condition="scaled_image" />
+               <figcaption class="padding-10-0" tal:condition="context/image_caption|nothing"
+                   tal:content="context/image_caption">
+               </figcaption>
+      </figure>
+-->
+
+      <div tal:replace="structure context/text/output|None" />
+
+      <tal:check tal:condition="view/back_researchcenters|None">
+         <h2 i18n:translate="">Research Centers</h2>
+         <tal:repeat tal:repeat="ref view/back_researchcenters">
+          <tal:define tal:define="ref_obj nocall:ref">
+            <h3>
+              <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                ${ref_obj/Title|None}
+              </a>
+            </h3>
+          </tal:define>
+         </tal:repeat>
+      </tal:check>
+
+      <tal:check tal:condition="view/back_researchers|None">
+         <h2 i18n:translate="">Researchers</h2>
+         <tal:repeat tal:repeat="ref view/back_researchers">
+          <tal:define tal:define="ref_obj nocall:ref">
+            <h3>
+              <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                ${ref_obj/Title|None}
+              </a>
+            </h3>
+          </tal:define>
+         </tal:repeat>
+      </tal:check>
+
+  </metal:block>
+</body>
+</html>

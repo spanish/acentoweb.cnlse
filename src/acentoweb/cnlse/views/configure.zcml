@@ -1,0 +1,41 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="acentoweb.cnlse">
+
+  -*- extra stuff goes here -*-
+
+  <browser:page
+    name="cnlse-researchcenter-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".cnlse_researchcenter_view.CNLSEResearchcenterView"
+    template="cnlse_researchcenter_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="cnlse-library-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".cnlse_library_view.CNLSELibraryView"
+    template="cnlse_library_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    name="cnlse-researcher-view"
+    for="plone.dexterity.interfaces.IDexterityItem"
+    class=".cnlse_researcher_view.CNLSEResearcherView"
+    template="cnlse_researcher_view.pt"
+    permission="zope2.View"
+    />
+
+</configure>
+
+
+
+
+
+
+
+
