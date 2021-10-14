@@ -30,7 +30,7 @@ class CNLSEResearchcenterView(BrowserView):
 
     def get_relatedlibraries(self):
         """Returns libraries"""
-        refs = (self.context.relatedLibraries)
+        refs = self.context.relatedLibraries
         to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
         refers = self.get_referers(self.context)
         from_objects = [ref.from_object for ref in refers if not ref.isBroken()]
@@ -39,7 +39,7 @@ class CNLSEResearchcenterView(BrowserView):
 
     def get_relatedresearchers(self):
         """Returns researchers"""
-        refs = (self.context.relatedResearchers)
+        refs = self.context.relatedResearchers
         to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
         refers = self.get_referers(self.context)
         from_objects = [ref.from_object for ref in refers if not ref.isBroken()]

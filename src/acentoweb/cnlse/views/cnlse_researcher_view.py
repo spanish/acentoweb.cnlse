@@ -33,6 +33,7 @@ class CNLSEResearcherView(BrowserView):
         context = context and context or self.context
         rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
         rel_items = list(catalog.findRelations(rel_query))
+        return []
         return rel_items
 
     #Both relations'ways' are kept, in case you want to refer 'the other way around later'
@@ -45,18 +46,30 @@ class CNLSEResearcherView(BrowserView):
         to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
         refers = self.get_referers(self.context)
         from_objects = [ref.from_object for ref in refers if not ref.isBroken()]
-        ref_list = to_objects + from_objects
+        ref_list = to_objects  # + from_objects
+        # The part '+ from objects' needs to be included in the one above if
+        # we want to link from B to A, not just A to B
+        # (from Library to Reasearcher AND ALSO Researcher to Library)
         return OrderedDict( (x,1) for x in ref_list ).keys()
 
     def get_referers(self, context = None):
         """ Return a list of backreference relationvalues
+        This includes ALL items that refers / points back
+        If we want only one type, we will have to 'sort / filter'
         """
         catalog = getUtility(ICatalog)
         intids = getUtility(IIntIds)
+        result= []
         context = context and context or self.context
         rel_query = { 'to_id' : intids.getId(aq_inner(context)) }
-        rel_items = list(catalog.findRelations(rel_query))
-        return rel_items
+        for rel in list(catalog.findRelations(rel_query)):
+            obj = intids.queryObject(rel.from_id)
+            if obj is not None and checkPermission('zope2.View', obj):
+                if obj.portal_type == 'CNLSE Library' :
+                    result.append(obj)
+        return result
+        #rel_items = list(catalog.findRelations(rel_query))
+        #return rel_items
 
     def back_researchcenters(self, context = None ):
         """
