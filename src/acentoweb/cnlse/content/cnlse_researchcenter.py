@@ -42,6 +42,22 @@ class ICNLSEResearchcenter(model.Schema):
         )
     )
 
+    tax1 = schema.Choice(
+        title = _("Tax", default=u"Tax"),
+        description= _("Choose Tax", default=u"Choose Tax"),
+        vocabulary = 'collective.taxonomy.mytax'
+    )
+
+    tax2 = schema.Set (
+        title = _("Tax2", default=u"Tax2"),
+        value_type=schema.Choice(
+            title = _("Tax2", default=u"Tax2"),
+            required = False,
+            vocabulary = 'collective.taxonomy.mytax'
+        )
+    )
+
+
     relatedLibraries = RelationList(
         title=_(u'label_related_libraries', default=u'CNLSE Libraries'),
         default=[],
