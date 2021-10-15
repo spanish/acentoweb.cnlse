@@ -33,6 +33,15 @@ class ICNLSEResearchcenter(model.Schema):
         missing_value=u'',
     )
 
+    territories = schema.List (
+        title = _("Territories", default=u"Territories"),
+        value_type=schema.Choice(
+            title = _("Territoriy", default=u"Territory"),
+            required = False,
+            vocabulary = 'acentoweb.cnlse.TerritoryVocabulary'
+        )
+    )
+
     relatedLibraries = RelationList(
         title=_(u'label_related_libraries', default=u'CNLSE Libraries'),
         default=[],

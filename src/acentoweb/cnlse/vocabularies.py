@@ -5,12 +5,14 @@ from plone import api
 
 from zope.i18nmessageid import MessageFactory
 
-_ = MessageFactory('medialog.dutchestheme')
+_ = MessageFactory('acentoweb.cnlse')
 
 def format_title(folder):
     return "{}  ...   [ {} ]".format( folder.Title, folder.getURL())
 
-
+def format_size(size):
+    return size.encode('ascii', 'ignore')
+    
 
 def LibrariesVocabulary(context):
 
@@ -31,3 +33,24 @@ def ResearchersVocabulary(context):
     return SimpleVocabulary(terms)
 
 directlyProvides(ResearchersVocabulary, IVocabularyFactory)
+
+
+
+#This vocabulary comes from the control panel settings
+def TerritoryVocabulary(context):
+    settings = api.portal.get_registry_record('acentoweb.cnlse.interfaces.IAcentowebCnlseSettings.territories')
+    if settings:
+        terms = [ SimpleTerm(value=pair, token=format_size(pair), title=pair) for pair in settings ]
+    return SimpleVocabulary(terms)
+
+directlyProvides(TerritoryVocabulary, IVocabularyFactory)
+
+
+#This vocabulary comes from the control panel settings
+def ClassificationVocabulary(context):
+    settings = api.portal.get_registry_record('acentoweb.cnlse.interfaces.IAcentowebCnlseSettings.classification')
+    if settings:
+        terms = [ SimpleTerm(value=pair, token=format_size(pair), title=pair) for pair in settings ]
+    return SimpleVocabulary(terms)
+
+directlyProvides(ClassificationVocabulary, IVocabularyFactory)

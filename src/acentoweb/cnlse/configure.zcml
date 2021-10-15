@@ -44,15 +44,23 @@
   <!-- -*- extra stuff goes here -*- -->
 
   <include package=".views" />
-
   <include package=".widgets" />
 
   <!-- vocabulary is neccesary for multilingual sites -->
   <utility
-    component=".vocabulary.LibrariesVocabulary"
+    component=".vocabularies.LibrariesVocabulary"
     name="acentoweb.cnlse.LibrariesVocabulary" />
   <utility
-    component=".vocabulary.ResearchersVocabulary"
+    component=".vocabularies.ResearchersVocabulary"
     name="acentoweb.cnlse.ResearchersVocabulary" />
+
+  <utility
+    component=".vocabularies.TerritoryVocabulary"
+    name="acentoweb.cnlse.TerritoryVocabulary" />
+
+  <utility
+    component=".vocabularies.ClassificationVocabulary"
+    name="acentoweb.cnlse.ClassificationVocabulary" />
+
 
 </configure>

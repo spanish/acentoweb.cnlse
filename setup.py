@@ -54,6 +54,7 @@ setup(
         'plone.app.dexterity',
         'plone.app.relationfield',
         'collective.taxonomy>=2.1.0',
+        'medialog.controlpanel=>1.4'
     ],
     extras_require={
         'test': [

@@ -21,6 +21,8 @@
 -->
       <div tal:replace="structure context/text/output|None" />
 
+
+
       <div tal:condition="context/mail">
         Correo: <a href="mailto:${context/mail}">${context/mail}</a>
       </div>
