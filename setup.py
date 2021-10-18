@@ -55,7 +55,7 @@ setup(
         'plone.app.relationfield',
         'collective.taxonomy>=2.1.0',
         'plone.app.vocabularies',
-        'medialog.controlpanel=>1.4'
+        'medialog.controlpanel>=1.4'
     ],
     extras_require={
         'test': [
