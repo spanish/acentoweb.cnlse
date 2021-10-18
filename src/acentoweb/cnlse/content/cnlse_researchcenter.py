@@ -57,6 +57,14 @@ class ICNLSEResearchcenter(model.Schema):
         )
     )
 
+    tax3 = schema.List (
+        title = _("Tax3", default=u"Tax3"),
+        value_type=schema.Choice(
+            title = _("Tax3", default=u"Tax3"),
+            required = False,
+            vocabulary = 'collective.taxonomy.mytax'
+        )
+    )
 
     relatedLibraries = RelationList(
         title=_(u'label_related_libraries', default=u'CNLSE Libraries'),

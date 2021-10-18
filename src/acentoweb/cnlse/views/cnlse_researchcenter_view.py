@@ -1,28 +1,31 @@
 # -*- coding: utf-8 -*-
 
 from acentoweb.cnlse import _
-from Products.Five.browser import BrowserView
+# from Products.Five.browser import BrowserView
+# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+
+#We use DefaultView instead of BrowserView so we can use the taxonomy widgets
+# directly
+# https://community.plone.org/t/can-i-render-ollective-taxonomy-field-directly-in-template-pt-tal/14403/2
+from plone.dexterity.browser.view import DefaultView
 
 from zc.relation.interfaces import ICatalog
 from collections import OrderedDict
-
 from Acquisition import aq_inner
 from zope.component import getUtility
 from zope.intid.interfaces import IIntIds
 from zope.security import checkPermission
 
-# from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
-
-class CNLSEResearchcenterView(BrowserView):
+class CNLSEResearchcenterView(DefaultView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.
     # template = ViewPageTemplateFile('cnlse_researchcenter_view.pt')
 
-    def __call__(self):
-        # Implement your own actions:
-        #self.msg = _(u'A small message')
-        return self.index()
+    #def __call__(self):
+    #    # Implement your own actions:
+    #    #self.msg = _(u'A small message')
+    #    return self.index()
 
     #Both relations'ways' are kept, in case you want to refer 'the other way around later'
     #see cnlse_library_view.py

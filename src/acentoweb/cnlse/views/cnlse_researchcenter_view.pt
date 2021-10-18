@@ -26,11 +26,35 @@
       <tal:check tal:condition="context/territories|None">
           <h4 i18n:translate="">Territories</h4>
           <ul>
-            <li tal:repeat="territory context/territories|None" i18n:translate="">
+            <li tal:repeat="territory context/territories" i18n:translate="">
                 ${territory}
             </li>
           </ul>
       </tal:check>
+      <!-- alternatively, use this line -->
+      <!--span tal:replace="structure view/widgets/territories/render" i18n:translate="" /-->
+
+      <p tal:condition="context/tax1|None">
+        <span i18n:translate="">Places:</span> <span tal:replace="structure view/widgets/tax1/render" i18n:translate="" />
+      </p>
+
+      <tal:check tal:condition="context/tax2|None">
+          <h4 i18n:translate="">Tax 2</h4>
+          <span tal:replace="structure view/widgets/tax2/render" i18n:translate="" />
+      </tal:check>
+
+      <tal:check tal:condition="context/tax3|None">
+          <h4 i18n:translate="">Tax 3</h4>
+          <span tal:replace="structure view/widgets/tax3/render" i18n:translate="" />
+      </tal:check>
+
+
+      <!-- move this CSS code to 'Custom CSS' or you own theme -->
+      <!-- note: color: white is to hide the ',' -->
+      <style>
+        #form-widgets-tax3 { color: rgba(255,255,255,0);}
+        #form-widgets-tax3 span { color: #777; padding: 3px 8px; border-radius: 2px; border: 1px solid silver; font-size: 90%}
+      </style>
 
       <div tal:condition="context/mail">
         Correo: <a href="mailto:${context/mail}">${context/mail}</a>
