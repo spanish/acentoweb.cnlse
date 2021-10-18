@@ -36,7 +36,7 @@ class ICNLSEResearchcenter(model.Schema):
     territories = schema.List (
         title = _("Territories", default=u"Territories"),
         value_type=schema.Choice(
-            title = _("Territoriy", default=u"Territory"),
+            title = _("Territory", default=u"Territory"),
             required = False,
             vocabulary = 'acentoweb.cnlse.TerritoryVocabulary'
         )
