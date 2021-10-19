@@ -33,7 +33,7 @@ Tell me what your product does
 Features
 --------
 
-- Like acentoweb.cnlse, but with Control Panel for vocabularies.
+- CNLSE Add-On. Version with Control Panel for vocabularies.
 
 
 Examples
@@ -66,7 +66,7 @@ Install acentoweb.cnlse by adding it to your buildout::
     ...
 
     eggs =
-        acentoweb.cnlsecp
+        acentoweb.cnlse
 
 
 and then running ``bin/buildout``
