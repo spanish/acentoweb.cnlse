@@ -66,7 +66,7 @@ Install acentoweb.cnlse by adding it to your buildout::
     ...
 
     eggs =
-        acentoweb.cnlse
+        acentoweb.cnlsecp
 
 
 and then running ``bin/buildout``
