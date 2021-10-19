@@ -87,4 +87,4 @@ msgstr "España"
 
 #. Default: "Norway"
 msgid "Norway"
-msgstr "Noruego"
+msgstr "Noruega"
