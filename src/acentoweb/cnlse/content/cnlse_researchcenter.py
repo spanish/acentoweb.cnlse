@@ -11,7 +11,7 @@ from z3c.relationfield.schema import RelationChoice
 from z3c.relationfield.schema import RelationList
 from plone.app.z3cform.widget import RelatedItemsFieldWidget
 from plone.app.vocabularies.catalog import CatalogSource
-from acentoweb.cnlse.vocabulary import LibrariesVocabulary
+from acentoweb.cnlse.vocabularies import LibrariesVocabulary
 
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('acentoweb.cnlse')
