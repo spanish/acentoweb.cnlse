@@ -46,21 +46,15 @@
   <include package=".views" />
   <include package=".widgets" />
 
-  <!-- vocabulary is neccesary for multilingual sites -->
-  <utility
-    component=".vocabularies.LibrariesVocabulary"
-    name="acentoweb.cnlse.LibrariesVocabulary" />
+  <!-- vocabularies are neccesary for multilingual sites -->
   <utility
     component=".vocabularies.ResearchersVocabulary"
     name="acentoweb.cnlse.ResearchersVocabulary" />
-
   <utility
-    component=".vocabularies.TerritoryVocabulary"
-    name="acentoweb.cnlse.TerritoryVocabulary" />
-
+    component=".vocabularies.PublishedResearchesVocabulary"
+    name="acentoweb.cnlse.PublishedResearchesVocabulary" />
   <utility
-    component=".vocabularies.ClassificationVocabulary"
-    name="acentoweb.cnlse.ClassificationVocabulary" />
-
-
+    component=".vocabularies.UnpublishedResearchesVocabulary"
+    name="acentoweb.cnlse.UnpublishedResearchesVocabulary" />
+    
 </configure>

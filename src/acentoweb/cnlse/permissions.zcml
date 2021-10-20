@@ -7,13 +7,13 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
-        id="acentoweb.cnlse.AddCNLSEResearchcenter"
-        title="acentoweb.cnlse: Add CNLSE Researchcenter"
+        id="acentoweb.cnlse.AddCNLSELibrary"
+        title="acentoweb.cnlse: Add CNLSE Library"
     />
 
     <permission
-        id="acentoweb.cnlse.AddCNLSELibrary"
-        title="acentoweb.cnlse: Add CNLSE Library"
+        id="acentoweb.cnlse.AddCNLSEResearchcenter"
+        title="acentoweb.cnlse: Add CNLSE Researchcenter"
     />
 
     <permission
