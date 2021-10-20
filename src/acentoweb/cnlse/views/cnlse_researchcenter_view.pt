@@ -20,48 +20,88 @@
       </figure>
 -->
 
-      <div tal:replace="structure context/text/output|None" />
+      <div tal:condition="context/drupal_image">
+        <h2 i18n:translate="">Drupal image</h2>
+        <p i18n:translate="" tal:content="context/drupal_image" />
+      </div>
 
+      <div tal:condition="context/drupal_video">
+        <h2 i18n:translate="">Drupal video</h2>
+        <p i18n:translate="" tal:content="context/drupal_video" />
+      </div>
 
-      <tal:check tal:condition="context/territories|None">
-          <h4 i18n:translate="">Territories</h4>
-          <ul>
-            <li tal:repeat="territory context/territories" i18n:translate="">
-                ${territory}
-            </li>
-          </ul>
-      </tal:check>
-      <!-- alternatively, use this line -->
-      <!--span tal:replace="structure view/widgets/territories/render" i18n:translate="" /-->
+      <div tal:condition="context/image">
+        <h2 i18n:translate="">Plone image</h2>
+        <img src="" alt=""  
+             tal:condition="context/image|nothing"
+             tal:define="scales context/@@images;
+                         scale python:scales.scale('image', 'mini')"
+             tal:replace="structure python:scale and scale.tag(css_class='myImage') or None" />
+      </div>
 
-      <p tal:condition="context/tax1|None">
-        <span i18n:translate="">Places:</span> <span tal:replace="structure view/widgets/tax1/render" i18n:translate="" />
-      </p>
+      <div tal:condition="context/video">
+        <h2 i18n:translate="">Plone video</h2>
+        <video controls width="100%" style="border:3px solid #EDEDED">
+          <source tal:attributes="src string:${context/absolute_url}/@@images/video" type="video/webm" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
 
-      <tal:check tal:condition="context/tax2|None">
-          <h4 i18n:translate="">Tax 2</h4>
-          <span tal:replace="structure view/widgets/tax2/render" i18n:translate="" />
-      </tal:check>
+      <div tal:condition="context/territory|None">
+          <h2 i18n:translate="">Territory</h2>
+          <p tal:replace="context/territory/title" />
+      </div>
 
-      <tal:check tal:condition="context/tax3|None">
-          <h4 i18n:translate="">Tax 3</h4>
-          <span tal:replace="structure view/widgets/tax3/render" i18n:translate="" />
-      </tal:check>
+      <div tal:condition="context/address|None">
+          <h2 i18n:translate="">Address</h2>
+          <p tal:replace="context/address/title" />
+      </div>
 
+      <div tal:condition="context/phone|None">
+          <h2 i18n:translate="">Phone</h2>
+          <p tal:replace="context/phone/title" />
+      </div>
 
-      <!-- move this CSS code to 'Custom CSS' or you own theme -->
-      <!-- note: color: white is to hide the ',' -->
-      <style>
-        #form-widgets-tax3 { color: rgba(255,255,255,0);}
-        #form-widgets-tax3 span { color: #777; padding: 3px 8px; border-radius: 2px; border: 1px solid silver; font-size: 90%}
-      </style>
+      <div tal:condition="context/fax|None">
+          <h2 i18n:translate="">Fax</h2>
+          <p tal:replace="context/fax/title" />
+      </div>
 
-      <div tal:condition="context/mail">
-        Correo: <a href="mailto:${context/mail}">${context/mail}</a>
+      <div tal:condition="context/email|None">
+          <h2 i18n:translate="">Email</h2>
+          <p><a href="mailto:${context/mail}">${context/email}</a></p>
       </div>
 
       <div tal:condition="context/web|None">
-        Web: <a href="${context/web}">${context/web}</a>
+          <h2 i18n:translate="">Web</h2>
+          <p><a href="${context/web}">${context/web}</a></p>
+      </div>
+
+      <div tal:condition="context/others">
+        <h2 i18n:translate="">Others</h2>
+        <div tal:replace="structure context/others/output|None" />
+      </div>
+
+      <div tal:condition="context/research_lines_classification">
+        <h2 i18n:translate="">Research lines: Classification</h2>
+        <div tal:define="classlines context/research_lines_classification"
+             tal:repeat="classline classlines"
+             tal:content="classline/title" />
+      </div>
+
+      <div tal:condition="context/research_lines_names">
+        <h2 i18n:translate="">Research lines: Names</h2>
+        <div tal:replace="structure context/research_lines_names/output|None" />
+      </div>
+
+      <div tal:condition="context/projects">
+        <h2 i18n:translate="">Projects</h2>
+        <div tal:replace="structure context/projects/output|None" />
+      </div>
+
+      <div tal:condition="context/more_information">
+        <h2 i18n:translate="">More information</h2>
+        <div tal:replace="structure context/more_information/output|None" />
       </div>
 
       <tal:check tal:condition="view/get_relatedresearchers|None">
@@ -77,9 +117,22 @@
           </tal:repeat>
         </tal:check>
 
-      <tal:check tal:condition="view/get_relatedlibraries|None">
-        <h2 i18n:translate="">Libraries</h2>
-          <tal:repeat tal:repeat="ref view/get_relatedlibraries">
+      <tal:check tal:condition="view/get_relatedpublishedresearches|None">
+        <h2 i18n:translate="">Published Researches</h2>
+          <tal:repeat tal:repeat="ref view/get_relatedpublishedresearches">
+          <tal:define tal:define="ref_obj nocall:ref">
+            <h3>
+              <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                ${ref_obj/Title|None}
+              </a>
+            </h3>
+          </tal:define>
+          </tal:repeat>
+        </tal:check>
+
+      <tal:check tal:condition="view/get_relatedunpublishedresearches|None">
+        <h2 i18n:translate="">Unpublished Researches</h2>
+          <tal:repeat tal:repeat="ref view/get_relatedunpublishedresearches">
           <tal:define tal:define="ref_obj nocall:ref">
             <h3>
               <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">

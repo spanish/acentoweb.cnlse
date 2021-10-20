@@ -24,6 +24,10 @@ class CNLSEResearcherView(BrowserView):
         #self.msg = _(u'A small message')
         return self.index()
 
+    #Both relations'ways' are kept, in case you want to refer 'the other way around later'
+    #see cnlse_library_view.py
+    #Note, if you only want back references of a certain content type: please look at code in cnlse_library.py
+
     def get_relatedresearchers(self, context = None):
 
         """ Return a list of backreference relationvalues
@@ -36,20 +40,22 @@ class CNLSEResearcherView(BrowserView):
         return []
         return rel_items
 
-    #Both relations'ways' are kept, in case you want to refer 'the other way around later'
-    #see cnlse_library_view.py
-    #Note, if you only want back references of a certain content type: please look at code in cnlse_library.py
-
-    def get_relatedlibraries(self):
-        """Returns libraries"""
-        refs = (self.context.relatedLibraries)
+    def get_relatedpublishedresearches(self):
+        """Returns published researches"""
+        refs = (self.context.relatedPublishedResearches)
         to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
         refers = self.get_referers(self.context)
         from_objects = [ref.from_object for ref in refers if not ref.isBroken()]
-        ref_list = to_objects  # + from_objects
-        # The part '+ from objects' needs to be included in the one above if
-        # we want to link from B to A, not just A to B
-        # (from Library to Reasearcher AND ALSO Researcher to Library)
+        ref_list = to_objects + from_objects
+        return OrderedDict( (x,1) for x in ref_list ).keys()
+
+    def get_relatedunpublishedresearches(self):
+        """Returns unpublished researches"""
+        refs = (self.context.relatedUnpublishedResearches)
+        to_objects = [ref.to_object for ref in refs if not ref.isBroken()]
+        refers = self.get_referers(self.context)
+        from_objects = [ref.from_object for ref in refers if not ref.isBroken()]
+        ref_list = to_objects + from_objects
         return OrderedDict( (x,1) for x in ref_list ).keys()
 
     def get_referers(self, context = None):

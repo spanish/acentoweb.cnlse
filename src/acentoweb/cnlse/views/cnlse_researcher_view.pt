@@ -19,12 +19,67 @@
              </figcaption>
       </figure>
 -->
-      <div tal:replace="structure context/text/output|None" />
 
+      <div tal:condition="context/drupal_image">
+        <h2 i18n:translate="">Drupal image</h2>
+        <p i18n:translate="" tal:content="context/drupal_image" />
+      </div>
 
+      <div tal:condition="context/drupal_video">
+        <h2 i18n:translate="">Drupal video</h2>
+        <p i18n:translate="" tal:content="context/drupal_video" />
+      </div>
 
-      <div tal:condition="context/mail">
-        Correo: <a href="mailto:${context/mail}">${context/mail}</a>
+      <div tal:condition="context/image">
+        <h2 i18n:translate="">Plone image</h2>
+        <img src="" alt=""  
+             tal:condition="context/image|nothing"
+             tal:define="scales context/@@images;
+                         scale python:scales.scale('image', 'mini')"
+             tal:replace="structure python:scale and scale.tag(css_class='myImage') or None" />
+      </div>
+
+      <div tal:condition="context/video">
+        <h2 i18n:translate="">Plone video</h2>
+        <video controls width="100%" style="border:3px solid #EDEDED">
+          <source tal:attributes="src string:${context/absolute_url}/@@images/video" type="video/webm" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+      </div>
+
+      <div tal:condition="context/address|None">
+          <h2 i18n:translate="">Address</h2>
+          <p tal:replace="context/address/title" />
+      </div>
+
+      <div tal:condition="context/phone|None">
+          <h2 i18n:translate="">Phone</h2>
+          <p tal:replace="context/phone/title" />
+      </div>
+
+      <div tal:condition="context/fax|None">
+          <h2 i18n:translate="">Fax</h2>
+          <p tal:replace="context/fax/title" />
+      </div>
+
+      <div tal:condition="context/email|None">
+          <h2 i18n:translate="">Email</h2>
+          <p><a href="mailto:${context/mail}">${context/email}</a></p>
+      </div>
+
+      <div tal:condition="context/web|None">
+          <h2 i18n:translate="">Web</h2>
+          <p><a href="${context/web}">${context/web}</a></p>
+      </div>
+
+      <div tal:condition="context/others">
+        <h2 i18n:translate="">Others</h2>
+        <div tal:replace="structure context/others/output|None" />
+      </div>
+
+      <div tal:condition="context/more_information">
+        <h2 i18n:translate="">More information</h2>
+        <div tal:replace="structure context/more_information/output|None" />
       </div>
 
       <tal:check tal:condition="view/back_researchcenters|None">
@@ -40,9 +95,9 @@
          </tal:repeat>
       </tal:check>
 
-      <tal:check tal:condition="view/get_relatedlibraries|None">
-        <h2 i18n:translate="">Libraries</h2>
-          <tal:repeat tal:repeat="ref view/get_relatedlibraries">
+      <tal:check tal:condition="view/get_relatedpublishedresearches|None">
+        <h2 i18n:translate="">Published Researches</h2>
+          <tal:repeat tal:repeat="ref view/get_relatedpublishedresearches">
           <tal:define tal:define="ref_obj nocall:ref">
             <h3>
               <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
@@ -52,6 +107,21 @@
           </tal:define>
           </tal:repeat>
         </tal:check>
+
+      <tal:check tal:condition="view/get_relatedunpublishedresearches|None">
+        <h2 i18n:translate="">Unpublished Researches</h2>
+          <tal:repeat tal:repeat="ref view/get_relatedunpublishedresearches">
+          <tal:define tal:define="ref_obj nocall:ref">
+            <h3>
+              <a href="${ref_obj/getURL|ref_obj/absolute_url}" class="margin-0 padding-0">
+                ${ref_obj/Title|None}
+              </a>
+            </h3>
+          </tal:define>
+          </tal:repeat>
+        </tal:check>
+
+
 
   </metal:block>
 </body>
