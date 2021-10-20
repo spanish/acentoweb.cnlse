@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0a2\n"
-"POT-Creation-Date: 2021-10-10 22:26+0000\n"
-"PO-Revision-Date: 2021-10-15 15:23+0100\n"
-"Last-Translator: espenm <post@medialog.no>\n"
+"POT-Creation-Date: 2021-10-20 02:42+0000\n"
+"PO-Revision-Date: 2021-10-20 04:41+0200\n"
+"Last-Translator: Acento Web <correo@acentoweb.com>\n"
 "Language-Team: Spanish <correo@acentoweb.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -13,11 +13,21 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
-"X-Generator: Poedit 1.5.7\n"
+"Language: es\n"
+"X-Generator: Poedit 2.3\n"
+
+#: ../views/cnlse_researchcenter_view.pt:56
+#: ../views/cnlse_researcher_view.pt:51
+msgid "Address"
+msgstr "Dirección"
+
+#: ../views/cnlse_library_view.pt:69
+msgid "Author"
+msgstr "Autor/a"
 
 #: ../profiles/default/types/CNLSE_Library.xml
 msgid "CNLSE Library"
-msgstr "CNLSE Biblio"
+msgstr "CNLSE Library"
 
 #: ../profiles/default/types/CNLSE_Researchcenter.xml
 msgid "CNLSE Researchcenter"
@@ -27,9 +37,37 @@ msgstr "CNLSE Centro de investigación"
 msgid "CNLSE Researcher"
 msgstr "CNLSE Investigador/a"
 
-#: ../views/cnlse_researchcenter_view.pt:25
-msgid "Categories"
-msgstr "Categorías"
+#: ../views/cnlse_library_view.pt:94
+msgid "Code"
+msgstr "Código"
+
+#: ../views/cnlse_library_view.pt:89
+msgid "Code type"
+msgstr "Tipo de código"
+
+#: ../views/cnlse_library_view.pt:84
+msgid "Collection"
+msgstr "Colección"
+
+#: ../views/cnlse_library_view.pt:64
+msgid "Details"
+msgstr "Detalles"
+
+#: ../views/cnlse_library_view.pt:35
+msgid "Drupal attachment"
+msgstr "Adjunto de Drupal"
+
+#: ../views/cnlse_library_view.pt:25
+#: ../views/cnlse_researchcenter_view.pt:24
+#: ../views/cnlse_researcher_view.pt:24
+msgid "Drupal image"
+msgstr "Imagen Drupal"
+
+#: ../views/cnlse_library_view.pt:30
+#: ../views/cnlse_researchcenter_view.pt:29
+#: ../views/cnlse_researcher_view.pt:29
+msgid "Drupal video"
+msgstr "Vídeo Drupal"
 
 #: ../profiles/default/types/CNLSE_Library.xml
 #: ../profiles/default/types/CNLSE_Researchcenter.xml
@@ -37,36 +75,121 @@ msgstr "Categorías"
 msgid "Edit"
 msgstr "Editar"
 
+#: ../views/cnlse_researchcenter_view.pt:71
+#: ../views/cnlse_researcher_view.pt:66
+msgid "Email"
+msgstr "Correo"
+
+#: ../views/cnlse_researchcenter_view.pt:66
+#: ../views/cnlse_researcher_view.pt:61
+msgid "Fax"
+msgstr "Fax"
+
 #: ../configure.zcml:28
 msgid "Installs the acentoweb.cnlse add-on."
-msgstr "Instala el complemento acentoweb.cnlse"
+msgstr "Instala el complemento acentoweb.cnlse."
 
-#: ../views/cnlse_researchcenter_view.pt:39
-#: ../views/cnlse_researcher_view.pt:45
-msgid "Libraries"
-msgstr "Biblios"
+#: ../views/cnlse_researchcenter_view.pt:103
+#: ../views/cnlse_researcher_view.pt:81
+msgid "More information"
+msgstr "Más información"
 
-#: ../views/cnlse_library_view.pt:37 ../views/cnlse_researcher_view.pt:25
+#: ../views/cnlse_researchcenter_view.pt:81
+#: ../views/cnlse_researcher_view.pt:76
+msgid "Others"
+msgstr "Otros"
+
+#: ../views/cnlse_researchcenter_view.pt:61
+#: ../views/cnlse_researcher_view.pt:56
+msgid "Phone"
+msgstr "Teléfono"
+
+#: ../views/cnlse_library_view.pt:57
+msgid "Plone attachment"
+msgstr "Adjunto de Plone"
+
+#: ../views/cnlse_library_view.pt:40
+#: ../views/cnlse_researchcenter_view.pt:34
+#: ../views/cnlse_researcher_view.pt:34
+msgid "Plone image"
+msgstr "Imagen Plone"
+
+#: ../views/cnlse_library_view.pt:49
+#: ../views/cnlse_researchcenter_view.pt:43
+#: ../views/cnlse_researcher_view.pt:43
+msgid "Plone video"
+msgstr "Vídeo Plone"
+
+#: ../views/cnlse_researchcenter_view.pt:98
+msgid "Projects"
+msgstr "Proyectos"
+
+#: ../views/cnlse_researchcenter_view.pt:121
+#: ../views/cnlse_researcher_view.pt:99
+msgid "Published Researches"
+msgstr "Investigaciones publicadas"
+
+#: ../views/cnlse_library_view.pt:79
+msgid "Publisher"
+msgstr "Editorial"
+
+#: ../views/cnlse_library_view.pt:116
+#: ../views/cnlse_researcher_view.pt:86
 msgid "Research Centers"
 msgstr "Centros de investigación"
 
-#: ../views/cnlse_library_view.pt:77
-msgid "Researchcenter"
-msgstr "Centro de investigación"
+#: ../views/cnlse_researchcenter_view.pt:86
+msgid "Research lines: Classification"
+msgstr "Líneas de investigación: Clasificación"
 
-#: ../views/cnlse_library_view.pt:57
+#: ../views/cnlse_researchcenter_view.pt:93
+msgid "Research lines: Names"
+msgstr "Líneas de investigación: Nombres"
+
+#: ../views/cnlse_library_view.pt:129
+#: ../views/cnlse_researchcenter_view.pt:108
 msgid "Researchers"
 msgstr "Investigadores/as"
 
+#: ../views/cnlse_library_view.pt:106
+msgid "Support"
+msgstr "Soporte"
+
+#: ../views/cnlse_researchcenter_view.pt:51
+msgid "Territory"
+msgstr "Territorio"
+
+#: ../views/cnlse_library_view.pt:99
+msgid "Topics"
+msgstr "Temas"
+
+#: ../views/cnlse_library_view.pt:111
+msgid "Ubication"
+msgstr "Ubicación"
+
 #: ../configure.zcml:37
 msgid "Uninstalls the acentoweb.cnlse add-on."
-msgstr "Desinstala el complemento acentoweb.cnlse"
+msgstr "Desinstala el complemento acentoweb.cnlse."
+
+#: ../views/cnlse_researchcenter_view.pt:134
+#: ../views/cnlse_researcher_view.pt:112
+msgid "Unpublished Researches"
+msgstr "Investigaciones inéditas"
 
 #: ../profiles/default/types/CNLSE_Library.xml
 #: ../profiles/default/types/CNLSE_Researchcenter.xml
 #: ../profiles/default/types/CNLSE_Researcher.xml
 msgid "View"
 msgstr "Ver"
+
+#: ../views/cnlse_researchcenter_view.pt:76
+#: ../views/cnlse_researcher_view.pt:71
+msgid "Web"
+msgstr "Web"
+
+#: ../views/cnlse_library_view.pt:74
+msgid "Year"
+msgstr "Año"
 
 #: ../configure.zcml:28
 msgid "acentoweb.cnlse"
@@ -76,15 +199,194 @@ msgstr "acentoweb.cnlse"
 msgid "acentoweb.cnlse (uninstall)"
 msgstr "acentoweb.cnlse (desinstalar)"
 
-#. Default: "CNLSE Libraries"
-#: ../content/cnlse_researchcenter.py:23 ../content/cnlse_researcher.py:23
-msgid "label_related_libraries"
-msgstr "CNLSE Biblios"
+#. Default: "Address"
+#: ../content/cnlse_researchcenter.py:64
+#: ../content/cnlse_researcher.py:57
+msgid "label_address"
+msgstr " Dirección"
 
-#. Default: "Spain"
-msgid "Spain"
-msgstr "España"
+#. Default: "Attachment"
+#: ../content/cnlse_library.py:62
+msgid "label_attachment"
+msgstr "Adjunto"
 
-#. Default: "Norway"
-msgid "Norway"
-msgstr "Noruega"
+#. Default: "Main attachment"
+#: ../content/cnlse_library.py:63
+msgid "label_attachment_description"
+msgstr "Adjunto principal"
+
+#. Default: "Author"
+#: ../content/cnlse_library.py:73
+msgid "label_author"
+msgstr "Author/a"
+
+#. Default: "Code"
+#: ../content/cnlse_library.py:98
+msgid "label_code"
+msgstr "Código"
+
+#. Default: "Code type"
+#: ../content/cnlse_library.py:93
+msgid "label_code_type"
+msgstr "Tipo de código"
+
+#. Default: "Collection"
+#: ../content/cnlse_library.py:88
+msgid "label_collection"
+msgstr "Colección"
+
+#. Default: "Details"
+#: ../content/cnlse_library.py:68
+msgid "label_details"
+msgstr "Detalles"
+
+#. Default: "Drupal attachment"
+#: ../content/cnlse_library.py:45
+msgid "label_drupal_attachment"
+msgstr "Adjunto de Drupal"
+
+#. Default: "Drupal image"
+#: ../content/cnlse_library.py:35
+#: ../content/cnlse_researchcenter.py:36
+#: ../content/cnlse_researcher.py:35
+msgid "label_drupal_image"
+msgstr " Imagen de Drupal"
+
+#. Default: "Drupal video"
+#: ../content/cnlse_library.py:40
+#: ../content/cnlse_researchcenter.py:41
+#: ../content/cnlse_researcher.py:40
+msgid "label_drupal_video"
+msgstr " Vídeo de Drupal"
+
+#. Default: "Email"
+#: ../content/cnlse_researchcenter.py:79
+#: ../content/cnlse_researcher.py:72
+msgid "label_email"
+msgstr " Correo"
+
+#. Default: "Fax"
+#: ../content/cnlse_researchcenter.py:74
+#: ../content/cnlse_researcher.py:67
+msgid "label_fax"
+msgstr " Fax"
+
+#. Default: "Image"
+#: ../content/cnlse_library.py:50
+#: ../content/cnlse_researchcenter.py:46
+#: ../content/cnlse_researcher.py:45
+msgid "label_image"
+msgstr " Imagen"
+
+#. Default: "Main image"
+#: ../content/cnlse_library.py:51
+#: ../content/cnlse_researchcenter.py:47
+#: ../content/cnlse_researcher.py:46
+msgid "label_image_description"
+msgstr " Imagen principal"
+
+#. Default: "Topics"
+#: ../content/cnlse_library.py:103
+msgid "label_library_topics"
+msgstr "Temas"
+
+#. Default: "More information"
+#: ../content/cnlse_researchcenter.py:115
+#: ../content/cnlse_researcher.py:89
+msgid "label_more_information"
+msgstr " Más información"
+
+#. Default: "Others"
+#: ../content/cnlse_researchcenter.py:91
+#: ../content/cnlse_researcher.py:84
+msgid "label_others"
+msgstr " Otros"
+
+#. Default: "Phone"
+#: ../content/cnlse_researchcenter.py:69
+#: ../content/cnlse_researcher.py:62
+msgid "label_phone"
+msgstr "Teléfono"
+
+#. Default: "Projects"
+#: ../content/cnlse_researchcenter.py:110
+msgid "label_projects"
+msgstr " Proyectos"
+
+#. Default: "Publisher"
+#: ../content/cnlse_library.py:83
+msgid "label_publisher"
+msgstr "Editorial"
+
+#. Default: "Published researches"
+#: ../content/cnlse_researchcenter.py:130
+#: ../content/cnlse_researcher.py:94
+msgid "label_related_published_researches"
+msgstr " Investigaciones publicadas"
+
+#. Default: "Researchers"
+#: ../content/cnlse_researchcenter.py:120
+#, fuzzy
+msgid "label_related_researchers"
+msgstr " Investigadores/as"
+
+#. Default: "Unpublished researches"
+#: ../content/cnlse_researchcenter.py:140
+#: ../content/cnlse_researcher.py:104
+msgid "label_related_unpublished_researches"
+msgstr " Investigaciones no publicadas"
+
+#. Default: "Research lines: Classification"
+#: ../content/cnlse_researchcenter.py:96
+msgid "label_research_lines_classification"
+msgstr " Líneas de investigación: Clasificación"
+
+#. Default: "Research lines: Names"
+#: ../content/cnlse_researchcenter.py:105
+msgid "label_research_lines_names"
+msgstr " Líneas de Investigación: Nombres"
+
+#. Default: "Support"
+#: ../content/cnlse_library.py:112
+msgid "label_support"
+msgstr "Soporte"
+
+#. Default: "Territory"
+#: ../content/cnlse_researchcenter.py:58
+msgid "label_territory"
+msgstr " Territorio"
+
+#. Default: "Territorial scope"
+#: ../content/cnlse_researchcenter.py:59
+msgid "label_territory_description"
+msgstr " Ámbito territorial"
+
+#. Default: "Ubication"
+#: ../content/cnlse_library.py:118
+msgid "label_ubication"
+msgstr "Ubicación"
+
+#. Default: "Video"
+#: ../content/cnlse_library.py:56
+#: ../content/cnlse_researchcenter.py:52
+#: ../content/cnlse_researcher.py:51
+msgid "label_video"
+msgstr " Vídeo"
+
+#. Default: "Main video"
+#: ../content/cnlse_library.py:57
+#: ../content/cnlse_researchcenter.py:53
+#: ../content/cnlse_researcher.py:52
+msgid "label_video_description"
+msgstr " Vídeo principal"
+
+#. Default: "Web"
+#: ../content/cnlse_researchcenter.py:85
+#: ../content/cnlse_researcher.py:78
+msgid "label_web"
+msgstr " Web"
+
+#. Default: "Year"
+#: ../content/cnlse_library.py:78
+msgid "label_year"
+msgstr "Año"
