@@ -54,8 +54,7 @@ setup(
         'plone.app.dexterity',
         'plone.app.relationfield',
         'collective.taxonomy>=2.1.0',
-        'plone.app.vocabularies',
-        'medialog.controlpanel>=1.4'
+        'plone.app.vocabularies'
     ],
     extras_require={
         'test': [

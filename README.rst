@@ -33,13 +33,15 @@ Tell me what your product does
 Features
 --------
 
-- CNLSE Add-On. Version with Control Panel for vocabularies.
+- CNLSE Add-On.
+
 
 
 Examples
 --------
 
-This add-on can be seen in action at the following sites: None
+This add-on can be seen in action at the following sites:
+- https://cnlse.es
 
 
 Documentation
