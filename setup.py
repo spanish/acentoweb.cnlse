@@ -53,6 +53,7 @@ setup(
         ###'plone.restapi',
         'plone.app.dexterity',
         'plone.app.relationfield',
+        'collective.dexteritytextindexer>=2.4.0',
         'collective.taxonomy>=2.1.0',
         'plone.app.vocabularies'
     ],
