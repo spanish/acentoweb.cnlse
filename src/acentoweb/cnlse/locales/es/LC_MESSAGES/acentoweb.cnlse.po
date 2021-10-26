@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.0a2\n"
-"POT-Creation-Date: 2021-10-20 02:42+0000\n"
-"PO-Revision-Date: 2021-10-20 04:41+0200\n"
+"POT-Creation-Date: 2021-10-26 22:35+0000\n"
+"PO-Revision-Date: 2021-10-27 00:41+0200\n"
 "Last-Translator: Acento Web <correo@acentoweb.com>\n"
 "Language-Team: Spanish <correo@acentoweb.com>\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "CNLSE Investigador/a"
 msgid "Code"
 msgstr "Código"
 
-#: ../views/cnlse_library_view.pt:89
+#: ../profiles/default/registry.xml ../views/cnlse_library_view.pt:89
 msgid "Code type"
 msgstr "Tipo de código"
 
@@ -57,14 +57,12 @@ msgstr "Detalles"
 msgid "Drupal attachment"
 msgstr "Adjunto de Drupal"
 
-#: ../views/cnlse_library_view.pt:25
-#: ../views/cnlse_researchcenter_view.pt:24
+#: ../views/cnlse_library_view.pt:25 ../views/cnlse_researchcenter_view.pt:24
 #: ../views/cnlse_researcher_view.pt:24
 msgid "Drupal image"
 msgstr "Imagen Drupal"
 
-#: ../views/cnlse_library_view.pt:30
-#: ../views/cnlse_researchcenter_view.pt:29
+#: ../views/cnlse_library_view.pt:30 ../views/cnlse_researchcenter_view.pt:29
 #: ../views/cnlse_researcher_view.pt:29
 msgid "Drupal video"
 msgstr "Vídeo Drupal"
@@ -89,10 +87,34 @@ msgstr "Fax"
 msgid "Installs the acentoweb.cnlse add-on."
 msgstr "Instala el complemento acentoweb.cnlse."
 
+#: ../profiles/default/registry.xml
+msgid "Library and Material supports"
+msgstr "Soportes de los elementos Library y Material"
+
+#: ../profiles/default/registry.xml
+msgid "Library code type"
+msgstr "Tipo de código de los elementos Library"
+
+#: ../profiles/default/registry.xml
+msgid "Library topics"
+msgstr "Temas de los elementos Library"
+
+#: ../profiles/default/registry.xml
+msgid "Link Category"
+msgstr "Categoría del enlace"
+
+#: ../profiles/default/registry.xml
+msgid "Metadata"
+msgstr "Metadatos"
+
 #: ../views/cnlse_researchcenter_view.pt:103
 #: ../views/cnlse_researcher_view.pt:81
 msgid "More information"
 msgstr "Más información"
+
+#: ../profiles/default/registry.xml
+msgid "Of Researchcenters"
+msgstr "De los Centros de Investigación"
 
 #: ../views/cnlse_researchcenter_view.pt:81
 #: ../views/cnlse_researcher_view.pt:76
@@ -108,14 +130,12 @@ msgstr "Teléfono"
 msgid "Plone attachment"
 msgstr "Adjunto de Plone"
 
-#: ../views/cnlse_library_view.pt:40
-#: ../views/cnlse_researchcenter_view.pt:34
+#: ../views/cnlse_library_view.pt:40 ../views/cnlse_researchcenter_view.pt:34
 #: ../views/cnlse_researcher_view.pt:34
 msgid "Plone image"
 msgstr "Imagen Plone"
 
-#: ../views/cnlse_library_view.pt:49
-#: ../views/cnlse_researchcenter_view.pt:43
+#: ../views/cnlse_library_view.pt:49 ../views/cnlse_researchcenter_view.pt:43
 #: ../views/cnlse_researcher_view.pt:43
 msgid "Plone video"
 msgstr "Vídeo Plone"
@@ -133,12 +153,11 @@ msgstr "Investigaciones publicadas"
 msgid "Publisher"
 msgstr "Editorial"
 
-#: ../views/cnlse_library_view.pt:116
-#: ../views/cnlse_researcher_view.pt:86
+#: ../views/cnlse_library_view.pt:116 ../views/cnlse_researcher_view.pt:86
 msgid "Research Centers"
 msgstr "Centros de investigación"
 
-#: ../views/cnlse_researchcenter_view.pt:86
+#: ../profiles/default/registry.xml ../views/cnlse_researchcenter_view.pt:86
 msgid "Research lines: Classification"
 msgstr "Líneas de investigación: Clasificación"
 
@@ -146,20 +165,35 @@ msgstr "Líneas de investigación: Clasificación"
 msgid "Research lines: Names"
 msgstr "Líneas de investigación: Nombres"
 
-#: ../views/cnlse_library_view.pt:129
-#: ../views/cnlse_researchcenter_view.pt:108
+#: ../views/cnlse_library_view.pt:129 ../views/cnlse_researchcenter_view.pt:108
 msgid "Researchers"
 msgstr "Investigadores/as"
 
-#: ../views/cnlse_library_view.pt:106
+#: ../profiles/default/registry.xml
+msgid "Resource Categories"
+msgstr "Categorías de los recursos"
+
+#: ../profiles/default/registry.xml ../views/cnlse_library_view.pt:106
 msgid "Support"
 msgstr "Soporte"
 
-#: ../views/cnlse_researchcenter_view.pt:51
+#: ../profiles/default/registry.xml
+msgid "Territorial scope"
+msgstr "Ámbito territorial"
+
+#: ../profiles/default/registry.xml ../views/cnlse_researchcenter_view.pt:51
 msgid "Territory"
 msgstr "Territorio"
 
-#: ../views/cnlse_library_view.pt:99
+#: ../profiles/default/registry.xml
+msgid "The categories of the resource"
+msgstr "Las categorías del recurso"
+
+#: ../profiles/default/registry.xml
+msgid "The category of the link"
+msgstr "La categoría del enlace"
+
+#: ../profiles/default/registry.xml ../views/cnlse_library_view.pt:99
 msgid "Topics"
 msgstr "Temas"
 
@@ -200,10 +234,9 @@ msgid "acentoweb.cnlse (uninstall)"
 msgstr "acentoweb.cnlse (desinstalar)"
 
 #. Default: "Address"
-#: ../content/cnlse_researchcenter.py:64
-#: ../content/cnlse_researcher.py:57
+#: ../content/cnlse_researchcenter.py:64 ../content/cnlse_researcher.py:57
 msgid "label_address"
-msgstr " Dirección"
+msgstr "Dirección"
 
 #. Default: "Attachment"
 #: ../content/cnlse_library.py:62
@@ -246,44 +279,38 @@ msgid "label_drupal_attachment"
 msgstr "Adjunto de Drupal"
 
 #. Default: "Drupal image"
-#: ../content/cnlse_library.py:35
-#: ../content/cnlse_researchcenter.py:36
+#: ../content/cnlse_library.py:35 ../content/cnlse_researchcenter.py:36
 #: ../content/cnlse_researcher.py:35
 msgid "label_drupal_image"
-msgstr " Imagen de Drupal"
+msgstr "Imagen de Drupal"
 
 #. Default: "Drupal video"
-#: ../content/cnlse_library.py:40
-#: ../content/cnlse_researchcenter.py:41
+#: ../content/cnlse_library.py:40 ../content/cnlse_researchcenter.py:41
 #: ../content/cnlse_researcher.py:40
 msgid "label_drupal_video"
-msgstr " Vídeo de Drupal"
+msgstr "Vídeo de Drupal"
 
 #. Default: "Email"
-#: ../content/cnlse_researchcenter.py:79
-#: ../content/cnlse_researcher.py:72
+#: ../content/cnlse_researchcenter.py:79 ../content/cnlse_researcher.py:72
 msgid "label_email"
-msgstr " Correo"
+msgstr "Correo"
 
 #. Default: "Fax"
-#: ../content/cnlse_researchcenter.py:74
-#: ../content/cnlse_researcher.py:67
+#: ../content/cnlse_researchcenter.py:74 ../content/cnlse_researcher.py:67
 msgid "label_fax"
-msgstr " Fax"
+msgstr "Fax"
 
 #. Default: "Image"
-#: ../content/cnlse_library.py:50
-#: ../content/cnlse_researchcenter.py:46
+#: ../content/cnlse_library.py:50 ../content/cnlse_researchcenter.py:46
 #: ../content/cnlse_researcher.py:45
 msgid "label_image"
-msgstr " Imagen"
+msgstr "Imagen"
 
 #. Default: "Main image"
-#: ../content/cnlse_library.py:51
-#: ../content/cnlse_researchcenter.py:47
+#: ../content/cnlse_library.py:51 ../content/cnlse_researchcenter.py:47
 #: ../content/cnlse_researcher.py:46
 msgid "label_image_description"
-msgstr " Imagen principal"
+msgstr "Imagen principal"
 
 #. Default: "Topics"
 #: ../content/cnlse_library.py:103
@@ -291,27 +318,24 @@ msgid "label_library_topics"
 msgstr "Temas"
 
 #. Default: "More information"
-#: ../content/cnlse_researchcenter.py:115
-#: ../content/cnlse_researcher.py:89
+#: ../content/cnlse_researchcenter.py:115 ../content/cnlse_researcher.py:89
 msgid "label_more_information"
-msgstr " Más información"
+msgstr "Más información"
 
 #. Default: "Others"
-#: ../content/cnlse_researchcenter.py:91
-#: ../content/cnlse_researcher.py:84
+#: ../content/cnlse_researchcenter.py:91 ../content/cnlse_researcher.py:84
 msgid "label_others"
-msgstr " Otros"
+msgstr "Otros"
 
 #. Default: "Phone"
-#: ../content/cnlse_researchcenter.py:69
-#: ../content/cnlse_researcher.py:62
+#: ../content/cnlse_researchcenter.py:69 ../content/cnlse_researcher.py:62
 msgid "label_phone"
 msgstr "Teléfono"
 
 #. Default: "Projects"
 #: ../content/cnlse_researchcenter.py:110
 msgid "label_projects"
-msgstr " Proyectos"
+msgstr "Proyectos"
 
 #. Default: "Publisher"
 #: ../content/cnlse_library.py:83
@@ -319,32 +343,29 @@ msgid "label_publisher"
 msgstr "Editorial"
 
 #. Default: "Published researches"
-#: ../content/cnlse_researchcenter.py:130
-#: ../content/cnlse_researcher.py:94
+#: ../content/cnlse_researchcenter.py:130 ../content/cnlse_researcher.py:94
 msgid "label_related_published_researches"
-msgstr " Investigaciones publicadas"
+msgstr "Investigaciones publicadas"
 
 #. Default: "Researchers"
 #: ../content/cnlse_researchcenter.py:120
-#, fuzzy
 msgid "label_related_researchers"
-msgstr " Investigadores/as"
+msgstr "Investigadores/as"
 
 #. Default: "Unpublished researches"
-#: ../content/cnlse_researchcenter.py:140
-#: ../content/cnlse_researcher.py:104
+#: ../content/cnlse_researchcenter.py:140 ../content/cnlse_researcher.py:104
 msgid "label_related_unpublished_researches"
-msgstr " Investigaciones no publicadas"
+msgstr "Investigaciones no publicadas"
 
 #. Default: "Research lines: Classification"
 #: ../content/cnlse_researchcenter.py:96
 msgid "label_research_lines_classification"
-msgstr " Líneas de investigación: Clasificación"
+msgstr "Líneas de investigación: Clasificación"
 
 #. Default: "Research lines: Names"
 #: ../content/cnlse_researchcenter.py:105
 msgid "label_research_lines_names"
-msgstr " Líneas de Investigación: Nombres"
+msgstr "Líneas de Investigación: Nombres"
 
 #. Default: "Support"
 #: ../content/cnlse_library.py:112
@@ -354,12 +375,12 @@ msgstr "Soporte"
 #. Default: "Territory"
 #: ../content/cnlse_researchcenter.py:58
 msgid "label_territory"
-msgstr " Territorio"
+msgstr "Territorio"
 
 #. Default: "Territorial scope"
 #: ../content/cnlse_researchcenter.py:59
 msgid "label_territory_description"
-msgstr " Ámbito territorial"
+msgstr "Ámbito territorial"
 
 #. Default: "Ubication"
 #: ../content/cnlse_library.py:118
@@ -367,24 +388,21 @@ msgid "label_ubication"
 msgstr "Ubicación"
 
 #. Default: "Video"
-#: ../content/cnlse_library.py:56
-#: ../content/cnlse_researchcenter.py:52
+#: ../content/cnlse_library.py:56 ../content/cnlse_researchcenter.py:52
 #: ../content/cnlse_researcher.py:51
 msgid "label_video"
-msgstr " Vídeo"
+msgstr "Vídeo"
 
 #. Default: "Main video"
-#: ../content/cnlse_library.py:57
-#: ../content/cnlse_researchcenter.py:53
+#: ../content/cnlse_library.py:57 ../content/cnlse_researchcenter.py:53
 #: ../content/cnlse_researcher.py:52
 msgid "label_video_description"
-msgstr " Vídeo principal"
+msgstr "Vídeo principal"
 
 #. Default: "Web"
-#: ../content/cnlse_researchcenter.py:85
-#: ../content/cnlse_researcher.py:78
+#: ../content/cnlse_researchcenter.py:85 ../content/cnlse_researcher.py:78
 msgid "label_web"
-msgstr " Web"
+msgstr "Web"
 
 #. Default: "Year"
 #: ../content/cnlse_library.py:78
