@@ -1,24 +1,25 @@
 <?xml version="1.0"?>
 <object name="portal_catalog">
-  <!--<column value="my_meta_column"/>-->
+  <!-- Indexes -->
     <index name="code_type" meta_type="FieldIndex">
         <indexed_attr value="code_type"/>
     </index>
-    <column value="code_type"/>
     <index name="research_lines_classification" meta_type="KeywordIndex">
         <indexed_attr value="research_lines_classification"/>
     </index>
-    <column value="research_lines_classification"/>
     <index name="support" meta_type="FieldIndex">
         <indexed_attr value="support"/>
     </index>
-    <column value="support"/>
     <index name="territory" meta_type="FieldIndex">
         <indexed_attr value="territory"/>
     </index>
-    <column value="territory"/>
     <index name="topics" meta_type="KeywordIndex">
         <indexed_attr value="topics"/>
     </index>
+  <!-- Metadata Columns -->
+    <column value="code_type"/>
+    <column value="research_lines_classification"/>
+    <column value="support"/>
+    <column value="territory"/>
     <column value="topics"/>
 </object>
