@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_catalog">
-  <!-- Indexes -->
+  <!-- Indexes acentoweb.cnlse -->
     <index name="code_type" meta_type="FieldIndex">
         <indexed_attr value="code_type"/>
     </index>
@@ -16,10 +16,20 @@
     <index name="topics" meta_type="KeywordIndex">
         <indexed_attr value="topics"/>
     </index>
-  <!-- Metadata Columns -->
+  <!-- Indexes TTW content types -->
+    <index name="link_category" meta_type="FieldIndex">
+        <indexed_attr value="link_category"/>
+    </index>
+    <index name="resource_categories" meta_type="KeywordIndex">
+        <indexed_attr value="resource_categories"/>
+    </index>
+  <!-- Metadata Columns acentoweb.cnlse -->
     <column value="code_type"/>
     <column value="research_lines_classification"/>
     <column value="support"/>
     <column value="territory"/>
     <column value="topics"/>
+  <!-- Metadata Columns  TTW content types -->
+    <column value="link_category"/>
+    <column value="resource_categories"/>
 </object>

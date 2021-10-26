@@ -3,7 +3,7 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="acentoweb.cnlse">
 
-<!-- -*- extra stuff goes here -*- -->
+  <!-- Collection Criterias of acentoweb.cnlse -->
 
     <records interface="plone.app.querystring.interfaces.IQueryField"
              prefix="plone.app.querystring.field.code_type">
@@ -69,5 +69,33 @@
         <value key="vocabulary">collective.taxonomy.cnlse_library_topics</value>
        <value key="group" i18n:translate="">Metadata</value>
     </records>
-  
+
+  <!-- Collection Criterias of TTW content types -->
+
+    <records interface="plone.app.querystring.interfaces.IQueryField"
+             prefix="plone.app.querystring.field.link_category">
+        <value key="title" i18n:translate="">Link Category</value>
+        <value key="description" i18n:translate="">The category of the link</value>
+        <value key="enabled">True</value>
+        <value key="sortable">False</value>
+        <value key="operations">
+            <element>plone.app.querystring.operation.selection.any</element>
+        </value>
+        <value key="vocabulary">collective.taxonomy.cnlse_link_category</value>
+       <value key="group" i18n:translate="">Metadata</value>
+    </records>
+
+    <records interface="plone.app.querystring.interfaces.IQueryField"
+             prefix="plone.app.querystring.field.resource_categories">
+        <value key="title" i18n:translate="">Resource Categories</value>
+        <value key="description" i18n:translate="">The categories of the resource</value>
+        <value key="enabled">True</value>
+        <value key="sortable">False</value>
+        <value key="operations">
+            <element>plone.app.querystring.operation.selection.any</element>
+        </value>
+        <value key="vocabulary">collective.taxonomy.cnlse_resource_categories</value>
+       <value key="group" i18n:translate="">Metadata</value>
+    </records>
+
 </registry>
