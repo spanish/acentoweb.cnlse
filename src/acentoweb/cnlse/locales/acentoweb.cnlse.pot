@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2021-10-20 02:42+0000\n"
+"POT-Creation-Date: 2021-10-26 22:35+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,6 +42,7 @@ msgstr ""
 msgid "Code"
 msgstr ""
 
+#: ../profiles/default/registry.xml
 #: ../views/cnlse_library_view.pt:89
 msgid "Code type"
 msgstr ""
@@ -90,9 +91,33 @@ msgstr ""
 msgid "Installs the acentoweb.cnlse add-on."
 msgstr ""
 
+#: ../profiles/default/registry.xml
+msgid "Library and Material supports"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Library code type"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Library topics"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Link Category"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Metadata"
+msgstr ""
+
 #: ../views/cnlse_researchcenter_view.pt:103
 #: ../views/cnlse_researcher_view.pt:81
 msgid "More information"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "Of Researchcenters"
 msgstr ""
 
 #: ../views/cnlse_researchcenter_view.pt:81
@@ -139,6 +164,7 @@ msgstr ""
 msgid "Research Centers"
 msgstr ""
 
+#: ../profiles/default/registry.xml
 #: ../views/cnlse_researchcenter_view.pt:86
 msgid "Research lines: Classification"
 msgstr ""
@@ -152,14 +178,33 @@ msgstr ""
 msgid "Researchers"
 msgstr ""
 
+#: ../profiles/default/registry.xml
+msgid "Resource Categories"
+msgstr ""
+
+#: ../profiles/default/registry.xml
 #: ../views/cnlse_library_view.pt:106
 msgid "Support"
 msgstr ""
 
+#: ../profiles/default/registry.xml
+msgid "Territorial scope"
+msgstr ""
+
+#: ../profiles/default/registry.xml
 #: ../views/cnlse_researchcenter_view.pt:51
 msgid "Territory"
 msgstr ""
 
+#: ../profiles/default/registry.xml
+msgid "The categories of the resource"
+msgstr ""
+
+#: ../profiles/default/registry.xml
+msgid "The category of the link"
+msgstr ""
+
+#: ../profiles/default/registry.xml
 #: ../views/cnlse_library_view.pt:99
 msgid "Topics"
 msgstr ""
