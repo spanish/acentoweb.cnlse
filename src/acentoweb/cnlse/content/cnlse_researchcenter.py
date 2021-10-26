@@ -57,7 +57,7 @@ class ICNLSEResearchcenter(model.Schema):
     territory = schema.Choice(
         title = _("label_territory", default=u"Territory"),
         description=_(u'label_territory_description', default=u'Territorial scope'),
-        vocabulary = 'collective.taxonomy.cnlse_resource_territory'
+        vocabulary = 'collective.taxonomy.cnlse_territory'
     )
 
     address = schema.TextLine(
