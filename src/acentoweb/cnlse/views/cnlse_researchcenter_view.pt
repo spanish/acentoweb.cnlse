@@ -87,9 +87,9 @@
       <div tal:condition="context/research_lines_classification">
         <h2 i18n:translate="">Research lines: Classification</h2>
         <div tal:content="structure view/widgets/research_lines_classification/render" />
-        <div tal:define="classlines context/research_lines_classification"
+        <!--div tal:define="classlines context/research_lines_classification"
              tal:repeat="classline classlines"
-             tal:content="classline/title" />
+             tal:content="classline/title" /-->
       </div>
 
       <div tal:condition="context/research_lines_names">
