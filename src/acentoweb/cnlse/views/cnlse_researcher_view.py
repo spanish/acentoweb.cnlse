@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from acentoweb.cnlse import _
-from Products.Five.browser import BrowserView
+#from Products.Five.browser import BrowserView
+from plone.dexterity.browser.view import DefaultView
 
 from zc.relation.interfaces import ICatalog
 from collections import OrderedDict
@@ -14,7 +15,7 @@ from zope.security import checkPermission
 # from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 
-class CNLSEResearcherView(BrowserView):
+class CNLSEResearcherView(DefaultView):
     # If you want to define a template here, please remove the template from
     # the configure.zcml registration of this view.
     # template = ViewPageTemplateFile('cnlse_researcher_view.pt')

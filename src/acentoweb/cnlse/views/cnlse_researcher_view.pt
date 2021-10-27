@@ -32,7 +32,7 @@
 
       <div tal:condition="context/image">
         <h2 i18n:translate="">Plone image</h2>
-        <img src="" alt=""  
+        <img src="" alt=""
              tal:condition="context/image|nothing"
              tal:define="scales context/@@images;
                          scale python:scales.scale('image', 'mini')"
@@ -46,6 +46,7 @@
           Sorry, your browser doesn't support embedded videos.
         </video>
       </div>
+
 
       <div tal:condition="context/address|None">
           <h2 i18n:translate="">Address</h2>
