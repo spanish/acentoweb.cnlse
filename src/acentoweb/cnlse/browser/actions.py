@@ -67,7 +67,7 @@ class CollectionMove(BrowserView):
             for item in  context.restrictedTraverse('@@contentlisting')():
                 try:
                     api.content.move(source=item.getObject(), target=to_folder)
-                    messages.add('Moved item: ' + item.Title(), type="info")
+                    messages.add('Moved item: ' + item.id, type="info")
                 except KeyError:
                     messages.add(u"Folder does not exist", type="warning")
 
