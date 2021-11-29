@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<object
+    meta_type="Plone Actions Tool"
+    name="portal_actions"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+    <object name="cnlse_move" meta_type="CMF Action"
+       i18n:domain="acentoweb.cnlse">
+     <property name="title" i18n:translate="">Move items to folder</property>
+     <property name="description"
+        i18n:translate="">Move all items to folder specified here</property>
+     <property
+        name="url_expr">string:${object_url}/@@cnlse_collection_object_move</property>
+     <property name="link_target"></property>
+     <property name="icon_expr"></property>
+     <property
+        name="available_expr">python:object.restrictedTraverse(&#x27;@@plone_interface_info&#x27;).provides(&#x27;acentoweb.cnlse.behaviors.collection_move.ICollectionMoveMarker&#x27;)</property>
+     <property name="permissions">
+      <element value="Modify portal content"/>
+     </property>
+     <property name="visible">True</property>
+    </object>
+ 
+</object>
